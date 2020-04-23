@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spotify API Player</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="style.css" />
+
+	<!-- Axios Library -->
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+	<script src="app.js"></script>
+</head>
+<body>
+
+<div class="container margin-top-20">
+	<div class="pull-right">
+		<a href="https://accounts.spotify.com/authorize?client_id=38ec2b65f218422f99b3abdf9e5f1e88&response_type=token&redirect_uri=http://localhost:3000" class="btn btn-info">Login to Spotify</a>
+		<a href="#" class="btn btn-warning">View Saved Tracks</a>
+	</div>
+
+	<div class="clearfix"></div>
+	<!--Search Form 1-->
+	<div class="row margin-top-20">
+		<form id="search-form">
+			<div class="col-sm-10">
+				<input type="text" name="search" class="form-control" placeholder="Search for Songs!" />
+			</div>
+			<div class="col-sm-2">
+				<button id="submitBtn" type="submit" class="btn btn-primary btn-block">Search Songs</button>
+			</div>
+		</form>
+	</div>
+	<!--/Search Form-->
+
+	<div id="song-container"></div>
+</div>
+
+</body>
+</html>
